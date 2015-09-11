@@ -6,7 +6,7 @@ def count(file, key):
     with open(file, mode='r') as f:
         reader = csv.reader(f)
         try:
-            for num, row in enumerate(csv.reader(f)):
+            for num, row in enumerate(reader):
                 for item in row:
                     item = item.lower()
                     if item.count(key):
